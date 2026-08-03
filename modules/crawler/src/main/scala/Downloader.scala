@@ -16,7 +16,7 @@ trait Downloader:
   def fetch: fs2.Stream[IO, (CrawlPlayer, Option[NewFederation], String)]
 
 object Downloader:
-  val downloadUrl     = uri"http://ratings.fide.com/download/players_list.zip"
+  val downloadUrl     = uri"https://files.serginho.dev/ratings/players_list.zip"
   val downloadTimeout = 10.minutes
   def currentYear     = java.time.Year.now.getValue
 
