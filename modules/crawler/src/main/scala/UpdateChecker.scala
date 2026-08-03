@@ -19,7 +19,7 @@ object UpdateChecker:
 
   private val request = Request[IO](
     method = Method.HEAD,
-    uri = uri"http://ratings.fide.com/download/players_list.zip"
+    uri = uri"https://files.serginho.dev/ratings/players_list.zip"
   )
 
   private val extract: Response[IO] => Option[String] =
